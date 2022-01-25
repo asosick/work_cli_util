@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "str_util.h"
 
 int system(const char *command);
 const char* getCurrentBranch();
@@ -41,6 +42,7 @@ const char* getCurrentBranch(){
     if(fgets(buffer, sizeof(buffer), fp) != NULL){
         ans = strdup( buffer);
     }
+    ans = replace_char(ans, '\n', ' ');
     fclose(fp);
     return ans;
 }
