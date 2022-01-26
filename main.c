@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "cli_parser.h"
-#include "str_util.h"
+#include "utils/cli_parser.h"
+#include "utils/str_util.h"
 
 
 const char* getCurrentBranch();

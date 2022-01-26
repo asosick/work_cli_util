@@ -6,9 +6,9 @@ set(CMAKE_C_STANDARD 11)
 include_directories(.)
 
 add_executable(cmdUtil
-        cli_parser.c
-        network.c
-        network.h
-        sick.c
-        str_util.c
-        str_util.h cli_parser.h)
+        utils/cli_parser.c
+        network/network.c
+        network/network.h
+        main.c
+        utils/str_util.c
+        utils/str_util.h utils/cli_parser.h)
