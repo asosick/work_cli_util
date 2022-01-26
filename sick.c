@@ -3,11 +3,21 @@
 #include <string.h>
 #include "str_util.h"
 
-int system(const char *command);
+
 const char* getCurrentBranch();
 void autoCommit(const char* branch, const char* commitMsg);
 
+const char* CLI_ARGS = "w:";
+
 int main(int argc, char **argv){
+    char** l = split_str("Hello.World.There", '.');
+    char** ptr = l;
+    while(*ptr){
+        printf("spliter %s", *ptr);
+        ptr++;
+    }
+    return 0;
+
     char** s = argv + sizeof(char);
     char* commitMsg = *(++argv);
     printf("Your commit message is %s\n", commitMsg);
