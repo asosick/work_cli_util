@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "cli_parser.h"
 #include "str_util.h"
 
 
@@ -10,12 +11,7 @@ void autoCommit(const char* branch, const char* commitMsg);
 const char* CLI_ARGS = "w:";
 
 int main(int argc, char **argv){
-    char** l = split_str("Hello.World.There", '.');
-    char** ptr = l;
-    while(*ptr){
-        printf("spliter %s", *ptr);
-        ptr++;
-    }
+    parse_args(argc, argv);
     return 0;
 
     char** s = argv + sizeof(char);
