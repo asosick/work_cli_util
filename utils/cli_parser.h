@@ -11,8 +11,11 @@
 #include <stdbool.h>
 #include <stdbool.h>
 
-void parse_args(int argc, char** argv);
+struct CLI_PAIR** parse_args(int argc, char** argv);
 struct CLI_PAIR** insertFlagValues(struct CLI_PAIR** flags, char** argv);
 struct CLI_PAIR** findFlags();
+
+struct CLI_PAIR;
+
 
 #endif //CMDUTIL_CLI_PARSER_H

@@ -7,8 +7,10 @@ include_directories(.)
 
 add_executable(cmdUtil
         utils/cli_parser.c
+        utils/cli_parser.h
         network/network.c
         network/network.h
         main.c
         utils/str_util.c
-        utils/str_util.h utils/cli_parser.h)
+        utils/str_util.h
+        )

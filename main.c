@@ -8,7 +8,6 @@
 const char* getCurrentBranch();
 void autoCommit(const char* branch, const char* commitMsg);
 
-const char* CLI_ARGS = "w:";
 
 int main(int argc, char **argv){
     parse_args(argc, argv);
